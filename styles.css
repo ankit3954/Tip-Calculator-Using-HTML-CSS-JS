@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+}
+
+.heading{
+    position: relative;
+    bottom: 10%;
+}
+
+.heading p{
+    letter-spacing: 6px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 48%;
+    width: 60%;
+    padding: 2%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+.input{
+    box-sizing: border-box;
+    padding: 2%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bill{
+    height: 25%;
+    position: relative;
+}
+
+.bill p{
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    margin: 2% 0;
+    color: hsl(186, 14%, 43%);
+}
+
+#dollar-icon{
+    position: absolute;
+    bottom: 16%;
+    left: 2%;
+}
+
+
+
+input[type='number'], input[type='text']{                     /* to start writing from right to left in input field */
+    direction: rtl;
+    padding-right: 5px;
+}
+
+input[type='number']::placeholder{         /* to move placeholder rightside in input field */
+    text-align: right;
+}
+
+input[type='text']::placeholder{
+    text-align: center;
+    color:hsl(186, 14%, 43%);
+}
+
+input::-webkit-outer-spin-button, 
+ input::-webkit-inner-spin-button{          /* to remove arrow in input field */
+    -webkit-appearance: none;
+}
+
+
+#bill-amount{
+    box-sizing: border-box;
+    width: 100%;
+    height: 45%;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    margin-bottom:2%;
+    cursor: pointer;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+}
+
+.select-tip{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-tip p{
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    margin: 2% 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.select-tip-btns{
+    height: 70%;
+    margin: 2%  0;
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 40% 40%;
+    gap: 20% 5%;
+}
+
+.select-tip-btns input{
+    cursor: pointer;
+    border: none;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+}
+
+.select-tip-btns input:hover{
+    background-color:   hsl(172, 56%, 70%) ;
+    color:hsl(183, 100%, 15%) ;
+}
+
+.clicked-btn{
+    background-color:  hsl(172, 67%, 45%)  !important;
+    color:hsl(183, 100%, 15%)  !important;
+}
+
+#custom{
+    padding-right: 5px;
+    background-color: white;
+    color: hsl(183, 100%, 15%);
+}
+
+
+.num-of-people{
+    margin: 2% 0;
+    height: 25%;
+    position: relative;
+}
+
+.num-of-people p{
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    margin: 2% 0;
+    color: hsl(186, 14%, 43%);
+
+}
+
+#people-icon{
+    position: absolute;
+    bottom: 16%;
+    left: 2%;
+}
+
+#people-num{
+    box-sizing: border-box;
+    width: 100%;
+    height: 45%;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    margin-bottom:2%;
+    cursor: pointer;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+}
+
+.result{
+    box-sizing: border-box;
+    padding: 5%;
+    width: 50%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 3%;
+    position: relative;
+}
+
+
+.tip-amount, .total-amount{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    position: absolute;
+    bottom:10%;
+    width: 80%;
+    height: 15%;
+}
+
+.btn button{
+    width: 100%;
+    height: 100%;
+    background-color:  hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    font-size: 120%;
+}
+
+.btn button:hover{
+    cursor: pointer;
+    background-color: hsl(172, 56%, 70%) ;
+}
+
+.head{
+    flex: 3;
+    font-size: 80%;
+    color: white;
+}
+
+.amnt{
+    flex: 1;
+    font-size: 200%;
+    color:  hsl(172, 67%, 45%);
+}
+
+
+span{
+    font-size: 90%;
+    color:  hsl(186, 14%, 43%);
+}
+
+/* Mobile Design */
+
+@media screen and (max-width:376px){
+
+    body{
+      overflow: hidden;
+      justify-content: normal;
+    }
+
+    .heading{
+        height: 20%;
+        bottom: 0;
+    }
+
+    .heading p{
+        position: relative;
+        top: 22%;
+    }
+    .container{
+        flex-direction: column;
+        height: 80%;
+        width: 100%;
+    }
+
+    .input{
+        height: 65%;
+        padding: 5%;
+        width: 100%;
+    }
+
+    .result{
+        box-sizing: border-box;
+        height: 35%;
+        margin: 0 5%;
+        width: 90%;
+    }
+
+    .select-tip-btns{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 30% 30%;
+        gap: 10%;
+    }
+
+    .btn button{
+        width: 110%;
+    }
+
+    #dollar-icon, #people-icon{
+        bottom: 25%;
+    }
+    
+}
+
